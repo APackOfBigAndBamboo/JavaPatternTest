@@ -1,5 +1,5 @@
 package FactoryPattern;
 
 interface IFruit {
- public void eat();
+    public void eat();
 }
