@@ -1,5 +1,5 @@
 package StrategyPattern;
 
 public interface Strategy {
-    public int doOperation(int a, int b);
+    int doOperation(int a, int b);
 }
