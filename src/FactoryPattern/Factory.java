@@ -7,7 +7,13 @@ public class Factory {
     public static <T> T getInstance(String classname) {//使用泛型 增强工厂功能特性 可以为更多的接口类服务
         T iFruit = null;
         try {
-            iFruit = (T) Class.forName(classname).newInstance();//通过类 装载器来加载类的实例 相比传统的工厂模式（使用new关键字）  更加灵活
+            iFruit = (T) Class.forName(classname).newInstance();//通过类 装载器来加载类的实例
+            // 相比传统的工厂模式（使用new关键字）  更加灵活
+            // 同时需要注意的是实用newinstance需要有无参构造函数
+            // 如果没有就抛出InstantiationException,
+            // 如果没有访问权限就抛出IllegalAccessException
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
